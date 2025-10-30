@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Librus Synergia – Logowanie</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    :root {
+      --synergia-purple: #8b5ca5;
+      --synergia-dark: #6b3b8f;
+      --background: #f7f8fc;
+      --card-bg: #ffffff;
+      --text-dark: #111827;
+      --text-light: #6b7280;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--background);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background: var(--card-bg);
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .login-box img {
+      width: 70px;
+      margin-bottom: 10px;
+    }
+
+    .login-box h1 {
+      color: var(--synergia-dark);
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      text-align: left;
+      margin-bottom: 18px;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: var(--synergia-purple);
+      outline: none;
+    }
+
+    button {
+      background: var(--synergia-purple);
+      color: white;
+      border: none;
+      padding: 10px 0;
+      width: 100%;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: var(--synergia-dark);
+    }
+
+    .forgot {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--synergia-purple);
+      text-decoration: none;
+    }
+
+    .forgot:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.75rem;
+      color: var(--text-light);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <img src="icon.png" alt="Librus Synergia logo">
+    <h1>Librus Synergia</h1>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="login">Login</label>
+        <input type="text" id="login" placeholder="Wpisz login" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Hasło</label>
+        <input type="password" id="password" placeholder="Wpisz hasło" required>
+      </div>
+      <button type="submit">ZALOGUJ</button>
+    </form>
+    <a href="#" class="forgot">Przypomnij hasło</a>
+    <footer>
+      <p>Formularz logowania do systemu Synergia – wersja testowa</p>
+    </footer>
+  </div>
+</body>
+</html>
