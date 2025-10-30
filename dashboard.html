@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Librus Synergia – Panel ucznia</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    :root {
+      --purple: #8b5ca5;
+      --dark-purple: #6b3b8f;
+      --bg: #f4f5fa;
+      --text: #1f2937;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--dark-purple), var(--purple));
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    header h2 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    #logout {
+      background: #ef4444;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 14px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #logout:hover {
+      background: #dc2626;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h3 {
+      text-align: center;
+      color: var(--dark-purple);
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 25px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+
+    .card h4 {
+      margin: 0;
+      color: var(--dark-purple);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #fff;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2 id="username">Witaj, uczniu 👋</h2>
+    <button id="logout">Wyloguj</button>
+  </header>
+
+  <main>
+    <h3>📚 Wybierz zakładkę</h3>
+    <div class="grid">
+      <div class="card" onclick="window.location.href='zakladki/oceny.html'">
+        <img src="icon.png" alt="">
+        <h4>Oceny</h4>
+      </div>
+
+      <div class="card" onclick="window.location.href='zakladki/plan-lekcji.html'">
+        <img src="icon.png" alt="">
+        <h4>Plan lekcji</h4>
+      </div>
+
+      <div class="card" onclick="window.location.href='zakladki/wiadomosci.html'">
+        <img src="icon.png" alt="">
+        <h4>Wiadomości</h4>
+      </div>
+
+      <div class="card" onclick="window.location.href='zakladki/frekwencja.html'">
+        <img src="icon.png" alt="">
+        <h4>Frekwencja</h4>
+      </div>
+
+      <div class="card" onclick="window.location.href='zakladki/zadania.html'">
+        <img src="icon.png" alt="">
+        <h4>Zadania domowe</h4>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Panel testowy Librus Synergia – wersja uczniowska</p>
+  </footer>
+</body>
+</html>
